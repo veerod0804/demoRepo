@@ -10,6 +10,8 @@ import { CoursesService } from '../courses.service';
 export class CoursesComponent implements OnInit {
 title = "List of courses";
 courses;
+isActive = true;
+
 
   constructor(service: CoursesService) {
     this.courses = service.getCourses();
@@ -20,5 +22,14 @@ courses;
 
   getTitle() {
     return this.title;
+  }
+
+  onSave($event: { stopPropagation: () => void; }) {
+    $event.stopPropagation();
+    console.log("button was clicked", $event);
+  }
+
+  onDivClicked() {
+    console.log("div was clicked");
   }
 }

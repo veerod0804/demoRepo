@@ -5,5 +5,10 @@
        {{course}}
     </li>
 </ul>
-<button class="btn btn-primary">Save</button>
+<button class="btn btn-primary" [class.active]="isActive">Save</button>
 
+<button class="btn" [style.backgroundColor]="isActive ? 'blue' : 'white'">Style Bound</button>
+
+<div (click)="onDivClicked()">
+<button class="button" (click)="onSave($event)">Event Bound</button>
+</div>
