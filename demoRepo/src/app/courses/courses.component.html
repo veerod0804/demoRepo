@@ -12,3 +12,5 @@
 <div (click)="onDivClicked()">
 <button class="button" (click)="onSave($event)">Event Bound</button>
 </div>
+
+<input #email (keyup.enter)="onKeyUp(email.value)" />

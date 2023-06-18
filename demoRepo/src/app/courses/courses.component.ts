@@ -32,4 +32,8 @@ isActive = true;
   onDivClicked() {
     console.log("div was clicked");
   }
+
+  onKeyUp(email: any) {
+  console.log(email);  
+  }
 }
