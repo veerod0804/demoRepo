@@ -11,6 +11,15 @@ export class CoursesComponent implements OnInit {
 title = "List of courses";
 courses;
 isActive = true;
+email = "email@email.com";
+course = {
+  title: "The Complete Angular Course",
+  rating: 4.9745,
+  students: 30123,
+  price: 190.95,
+  releaseDate: new Date(2016, 3, 1)
+}
+text = "lorem ipsum a blah blah blah"
 
 
   constructor(service: CoursesService) {
@@ -33,7 +42,7 @@ isActive = true;
     console.log("div was clicked");
   }
 
-  onKeyUp(email: any) {
-  console.log(email);  
+  onKeyUp() {
+  console.log(this.email);  
   }
 }

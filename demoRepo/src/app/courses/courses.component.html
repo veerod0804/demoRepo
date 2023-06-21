@@ -13,4 +13,20 @@
 <button class="button" (click)="onSave($event)">Event Bound</button>
 </div>
 
-<input #email (keyup.enter)="onKeyUp(email.value)" />
+<!-- two way binding example below -->
+<input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
+
+<!-- uppercase pipe is evaluated first, then lowercase (so the output on the view is lowercase) an example that you can add multiple pipes -->
+{{ course.title | uppercase | lowercase}} <br/>
+<!-- number pipe evaluates the number and adds a comma for 30,123 -->
+{{ course.students | number}} <br/>
+<!-- number pipe can also take arguments (pipe: arguments) 1.2-2: the first number is the digit allowed before the decimal. 
+    2-2 sets the min and max digits after the decimal place. If you set it to 1.1-1 it rounds up to 5.0 rather than 4.9745 -->
+{{ course.rating | number: '1.2-2' }} <br/>
+<!-- currency pipe adds currency formatting. You can add arguments for different kinds of currency. AUD=Australian dollars, true shifts to 'A$' for Australian dollars with symbol, 
+    3.2-2 ensures the amount can only be in format A$000.00 -->
+{{ course.price | currency:'AUD':true: '3.2-2' }} <br/>
+<!-- date pipe can format dates based on display preference -->
+{{ course.releaseDate | date: 'shortDate'}} <br/>
+<!-- limits the summary pipe to only display 10 characters -->
+{{ text | summary:10}}
