@@ -32,7 +32,11 @@ text = "lorem ipsum a blah blah blah"
   getTitle() {
     return this.title;
   }
-
+  onToggle() {
+    if (this.isActive) {
+      this.isActive = false;
+    } else this.isActive = true;
+  }
   onSave($event: { stopPropagation: () => void; }) {
     $event.stopPropagation();
     console.log("button was clicked", $event);
