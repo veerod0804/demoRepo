@@ -9,6 +9,7 @@ import { CoursesService } from './courses.service';
 import { SummaryPipe } from './summary.pipe';
 import { FavoriteComponentComponent } from './favorite-component/favorite-component.component';
 import { TitleCastingComponent } from './title-casting/title-casting.component';
+import { TitleCasePipe } from './title-case.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TitleCastingComponent } from './title-casting/title-casting.component';
     CourseComponent,
     SummaryPipe,
     FavoriteComponentComponent,
-    TitleCastingComponent
+    TitleCastingComponent,
+    TitleCasePipe
   ],
   imports: [
     BrowserModule,
