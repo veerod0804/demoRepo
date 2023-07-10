@@ -1,6 +1,6 @@
 <h1>Angular</h1>
 <courses></courses>
 
-<app-favorite-component></app-favorite-component>
+<app-favorite-component [is-favorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite-component>
 
-<app-title-casting></app-title-casting>
+<!-- <app-title-casting></app-title-casting> -->

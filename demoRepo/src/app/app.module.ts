@@ -7,7 +7,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from './courses.service';
 import { SummaryPipe } from './summary.pipe';
-import { FavoriteComponentComponent } from './favorite-component/favorite-component.component';
+import { FavoriteComponent } from './favorite/favorite.component';
 import { TitleCastingComponent } from './title-casting/title-casting.component';
 import { TitleCasePipe } from './title-case.pipe';
 
@@ -17,7 +17,7 @@ import { TitleCasePipe } from './title-case.pipe';
     CoursesComponent,
     CourseComponent,
     SummaryPipe,
-    FavoriteComponentComponent,
+    FavoriteComponent,
     TitleCastingComponent,
     TitleCasePipe
   ],
